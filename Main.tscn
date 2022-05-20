@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Port_city.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/UI Buttons/blue_button05.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI Buttons/blue_button03.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Fonts/GameTestFont45Outline2.tres" type="DynamicFont" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Margins" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="VBox" type="VBoxContainer" parent="Margins"]
+margin_left = 362.0
+margin_top = 238.0
+margin_right = 662.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 300, 300 )
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Play" type="TextureButton" parent="Margins/VBox"]
+margin_right = 300.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 150, 75 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Margins/VBox/Play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Level"
+align = 1
+valign = 1
+
+[node name="Settings" type="TextureButton" parent="Margins/VBox"]
+margin_top = 79.0
+margin_right = 300.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 150, 75 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Margins/VBox/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Settings"
+align = 1
+valign = 1
+
+[node name="Credits" type="TextureButton" parent="Margins/VBox"]
+margin_top = 158.0
+margin_right = 300.0
+margin_bottom = 233.0
+rect_min_size = Vector2( 150, 75 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Margins/VBox/Credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="Quit" type="TextureButton" parent="Margins/VBox"]
+margin_top = 237.0
+margin_right = 300.0
+margin_bottom = 312.0
+rect_min_size = Vector2( 150, 75 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Margins/VBox/Quit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Quit"
+align = 1
+valign = 1

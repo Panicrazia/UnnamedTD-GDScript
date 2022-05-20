@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Units/Friendly/Soldier.gd" type="Script" id=1]
+[ext_resource path="res://Assets/soldier.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 50.0
+
+[node name="Soldier" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.0851601, 0.0851601 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -126.941, -385.706 )
+
+[node name="HitBox" type="Area2D" parent="." groups=["FriendlyUnits"]]
+monitoring = false
+
+[node name="HitboxRange" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource( 1 )
+
+[node name="EnemyDecection" type="Area2D" parent="."]
+monitorable = false
+
+[node name="EngageRange" type="CollisionShape2D" parent="EnemyDecection"]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="EnemyDecection" to="." method="_on_EnemyDecection_area_entered"]
+[connection signal="area_exited" from="EnemyDecection" to="." method="_on_EnemyDecection_area_exited"]
